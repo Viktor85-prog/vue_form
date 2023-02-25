@@ -310,7 +310,7 @@
 @font-face {
   font-family: icons;
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  src: url("./fonts/icons.woff2") format("woff2"), url("./fonts/icons.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -1329,7 +1329,7 @@ i {
   background-color: #EBFFF6;
 }
 .notification-success .notification__icon {
-  background: url("../img/notif-ok.svg") center/cover no-repeat;
+  background: url("./img/notif-ok.svg") center/cover no-repeat;
 }
 .notification-success .notification__text {
   color: #008047;
@@ -1342,7 +1342,7 @@ i {
   background-color: #FDF2F2;
 }
 .notification-error .notification__icon {
-  background: url("../img/notif-close.svg") center/cover no-repeat;
+  background: url("./img/notif-close.svg") center/cover no-repeat;
 }
 .notification-error .notification__text {
   color: #991B1B;
@@ -6513,7 +6513,7 @@ i {
   font-weight: 500;
   color: #374151;
   appearance: none;
-  background: url("../img/arrow-down.svg") no-repeat 85% white;
+  background: url("./img/arrow-down.svg") no-repeat 85% white;
   background-size: 8px;
 }
 .table-list__count {
@@ -11749,7 +11749,7 @@ i {
   width: 20px;
   height: 20px;
   flex: 0 0 20px;
-  background: url("../img/no-conection.svg");
+  background: url("./img/no-conection.svg");
 }
 .chat-messanger__conection .drop-list {
   z-index: 6;
