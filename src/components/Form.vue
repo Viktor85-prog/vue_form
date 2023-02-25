@@ -55,12 +55,29 @@ export default {
     }
   },
   methods: {
+	resetData () {
+		this.email = ''
+		this.password =''
+	},
 	login() {
 		this.$v.$touch()
 		if(this.$v.pending || this.$v.$error) return
-		// if(this.name && this.password) {
-		// 	sendRequest()
-		// }
+
+		var that = this
+		
+		that.$http.post(`https://api.corecruiter.org/api/user/auth`,{
+			email: this.email,
+			password:this.password
+		})
+		.then((response) => {
+			console.log(response.data)
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
+
+		this.$v.$reset()
+		this.resetData()
 	},
 	validationStatus (validation) {
 		return typeof validation != "underfined" ? validation.$error :false
