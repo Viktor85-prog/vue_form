@@ -5,7 +5,7 @@
 			<input 
 				type="email" 
 				v-model.trim ='$v.email.$model' 
-				:class="{'form-authorization__input_error':!$v.email.required||!$v.email.email}"
+				:class="{'form-authorization__input_error':validationStatus($v.email)}"
 				class="form-authorization__input " 
 				id="authorization-email" 
 				name="email" 
@@ -19,7 +19,7 @@
 			<input 
 				type="text" 
 				v-model.trim ='$v.password.$model' 
-				:class="{'form-authorization__input_error':!$v.password.required||!$v.password.minLength}"
+				:class="{'form-authorization__input_error':validationStatus($v.email)}"
 				class="form-authorization__input" 
 				id="authorization-password" 
 				name="password" 
@@ -61,6 +61,9 @@ export default {
 		// if(this.name && this.password) {
 		// 	sendRequest()
 		// }
+	},
+	validationStatus (validation) {
+		return typeof validation != "underfined" ? validation.$error :false
 	}
   }
 }
